@@ -12,4 +12,4 @@ composer install
 php easyswoole-study start
 
 
-easyswoole 官方文档请阅读： https://www.easyswoole.com/
+easyswoole 官方文档请阅读： <a target='_blank'> https://www.easyswoole.com </a>
