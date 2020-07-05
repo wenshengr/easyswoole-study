@@ -150,4 +150,22 @@ class Index extends ApiBase
         return $this->writeJson(STATUS::CODE_OK, 'OK', $data);
     }
 
+    /**
+     * 第二套方案升级 - 直接读取缓存数据
+     * @return bool
+     */
+    public function list3()
+    {
+        $catId = !empty($this->params['cat_id']) ? intval($this->params['cat_id']) : 0;
+        try {
+            $videoData = (new \App\Lib\Caches\Video2())->getVideoCache($catId);
+        } catch (\Exception $e) {
+            return $this->writeJson(STATUS::CODE_BAD_REQUEST, '请求失败');
+        }
+
+        $count = count($videoData);
+        $data = $this->getPagingDatas($count, $videoData);
+        return $this->writeJson(STATUS::CODE_OK, 'OK', $data);
+    }
+
 }

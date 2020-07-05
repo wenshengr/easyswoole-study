@@ -8,14 +8,14 @@
 
 namespace App\Lib\Upload;
 
-use App\Lib\Upload\Base;
+use App\Lib\Upload\UploadBase;
 
 /**
  * 视频上传
  * Class Video
  * @package App\Lib\Upload
  */
-class Video extends Base
+class Video extends UploadBase
 {
     /**
      * 文件类型

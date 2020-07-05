@@ -155,29 +155,9 @@ class Test extends ApiBase
 
     public function redisss()
     {
-
-            //defer方式获取连接
-            $redis = PoolRedis::defer('redis');
-            $redis->set('test1111', '222');
-            $result = $redis->get('test1111');
-            var_dump($result);
-
-
-
-
-
-//
-//            //获取连接池对象
-//            $redisPool = \EasySwoole\RedisPool\Redis::getInstance()->get('redis');
-//            $redisClusterPool = \EasySwoole\RedisPool\Redis::getInstance()->get('redisCluster');
-//
-//            $redis = $redisPool->getObj();
-//            $redisPool->recycleObj($redis);
-//
-////清除pool中的定时器
-//            \EasySwoole\Component\Timer::getInstance()->clearAll();
-
-
-        return $this->writeJson(200, 'ok', ['defer' => $result,'invoke' => $result1]);
+        $redis = PoolRedis::defer('redis');
+        $redis->set('test1111', '222');
+        $result = $redis->get('test1111');
+        return $this->writeJson(200, 'ok', ['defer' => $result]);
     }
 }

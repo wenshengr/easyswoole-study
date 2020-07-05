@@ -1,15 +1,13 @@
 <?php
 namespace EasySwoole\EasySwoole;
 
-use App\CrontabWork\TaskTwo;
-use App\CrontabWork\TaskVideo;
+use App\Lib\Caches\Video2;
 use App\Lib\Es\EsClient;
-#use App\Lib\Redis\Redis;
+use App\Lib\Redis\Redis;
 use App\Lib\Caches\Video;
 use App\Lib\Db\Mysql;
 use EasySwoole\Component\Di;
 use EasySwoole\Component\Timer;
-use EasySwoole\EasySwoole\Bridge\Exception;
 use EasySwoole\EasySwoole\Swoole\EventRegister;
 use EasySwoole\EasySwoole\AbstractInterface\Event;
 use EasySwoole\FastCache\Cache;
@@ -19,14 +17,12 @@ use EasySwoole\FastCache\SyncData;
 use EasySwoole\Http\Request;
 use EasySwoole\Http\Response;
 use EasySwoole\Utility\File;
-use App\Lib\Process\ConsumerTest;
 use EasySwoole\Component\Process\Manager;
-use App\Lib\Db\Redis;
+
 
 
 class EasySwooleEvent implements Event
 {
-
     public static function initialize()
     {
         // TODO: Implement initialize() method.
@@ -35,15 +31,16 @@ class EasySwooleEvent implements Event
         // 载入Config文件夹中的配置文件
         self::loadConfigFile();
 
-        // 初始化 - 注册MySQL数据库
+        // 初始化数据库
         Mysql::getInstance()->initDatabase();
 
-        // 初始化 - 注册redis
-        Redis::getInstance()->initRedis();
+        // 初始化 - 注册redis - 协程客户端使用
+        //\App\Lib\Pool\PoolRedis::getInstance()->initRedis();
     }
 
     public static function mainServerCreate(EventRegister $register)
     {
+        Di::getInstance()->set('REDIS', Redis::getInstance());
         Di::getInstance()->set('ES', EsClient::getInstance());
 
         // 如何实现队列消费/自定义进程
@@ -51,6 +48,24 @@ class EasySwooleEvent implements Event
 
         //毫秒任务计划
         //self::cronTaskWork($register);
+
+        self::cronTaskWork2($register);
+    }
+
+    /**
+     * 毫秒任务计划
+     * @param $register
+     */
+    private static function cronTaskWork2($register)
+    {
+        // 开始一个定时任务计划 - 毫秒级别
+        self::setFastCache();
+
+        /* 毫秒定时器 */
+        $videoCache = new Video2();
+        Timer::getInstance()->loop(1 * 1000, function () use ($videoCache) {
+            $videoCache->setIndexVideo();
+        });
     }
 
     /**
@@ -60,9 +75,8 @@ class EasySwooleEvent implements Event
     private static function cronTaskWork($register)
     {
         // 开始一个定时任务计划 - 分钟级别
-        //Crontab::getInstance()->addTask(TaskOne::class);
-        //Crontab::getInstance()->addTask(TaskTwo::class);
-        //Crontab::getInstance()->addTask(TaskVideo::class);
+        //Crontab::getInstance()->addTask(\App\CrontabWork\TaskOne::class);
+        //Crontab::getInstance()->addTask(\App\CrontabWork\TaskTwo::class);
 
 
         // 开始一个定时任务计划 - 毫秒级别
@@ -76,7 +90,7 @@ class EasySwooleEvent implements Event
 
         $register->add(EventRegister::onWorkerStart, function (\swoole_server $server, $workerId) use ($videoCache) {
             if ($workerId == 0) {
-                Timer::getInstance()->loop(5 * 1000, function () use ($videoCache) {
+                Timer::getInstance()->loop(1 * 1000, function () use ($videoCache) {
                     $videoCache->setIndexVideo();
                 });
             }
@@ -108,10 +122,6 @@ class EasySwooleEvent implements Event
         }
     }
 
-    /**
-     * 设置header，解决跨域问题
-     * @param Response $response
-     */
     public static function setHeader(Response $response)
     {
         $response->withHeader('Access-Control-Allow-Origin', '*');
@@ -129,7 +139,7 @@ class EasySwooleEvent implements Event
         for ($i = 0 ;$i < $allNum;$i++){
             $processConfig= new \EasySwoole\Component\Process\Config();
             $processConfig->setProcessName('consumer_testp_'.$i);//设置进程名称
-            Manager::getInstance()->addProcess(new ConsumerTest($processConfig));
+            Manager::getInstance()->addProcess(new \App\Lib\Process\ConsumerTest($processConfig));
         }
     }
 
@@ -202,19 +212,16 @@ class EasySwooleEvent implements Event
                 File::createFile($path,serialize($data));
             });
         } catch (RuntimeError $e) {
-            //echo "[Warn] --> fast-cache注册onShutdown失败\n";
-            throw new Exception("[Warn] --> fast-cache注册onShutdown失败");
+            echo "[Warn] --> fast-cache注册onShutdown失败\n";
         }
 
         try {
             Cache::getInstance()->setTempDir(EASYSWOOLE_TEMP_DIR)
                 ->attachToServer(ServerManager::getInstance()->getSwooleServer());
         } catch (\Exception $e) {
-            //echo "[Warn] --> fast-cache注册失败\n";
-            throw new Exception("[Warn] --> fast-cache注册失败");
+            echo "[Warn] --> fast-cache注册失败\n";
         } catch (RuntimeError $e) {
-            //echo "[Warn] --> fast-cache注册失败\n";
-            throw new Exception("[Warn] --> fast-cache注册失败");
+            echo "[Warn] --> fast-cache注册失败\n";
         }
 
     }

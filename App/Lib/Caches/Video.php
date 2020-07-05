@@ -79,7 +79,7 @@ class Video
      */
     private function getIndexVideoCacheKey($catId = 0)
     {
-        return 'index_vedio_cat_' . $catId;
+        return 'video_index_cat_' . $catId;
     }
 
     /**
@@ -88,8 +88,8 @@ class Video
      */
     private function getIndexVideoCacheDir()
     {
-        $indexCacheFilePath = \Yaconf::get('app.indexCacheFilePath');
-        return EASYSWOOLE_ROOT . '/'.$indexCacheFilePath;
+        $cacheVideoPath = \Yaconf::get('app.cacheVideoPath');
+        return EASYSWOOLE_ROOT . '/'.$cacheVideoPath;
     }
 
     /**
@@ -102,7 +102,7 @@ class Video
     {
         $dir = $this->getIndexVideoCacheDir();
         File::createDirectory($dir);
-        return file_put_contents($dir . '/' . $catId . '.json', json_encode($data));
+        return file_put_contents($dir . '/index_' . $catId . '.json', json_encode($data));
     }
 
     /**

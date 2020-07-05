@@ -1,7 +1,7 @@
 <?php
 namespace App\CrontabWork;
 /**
- * @filename TaskOne.php
+ * @filename TaskVideo.php
  * @desc this is file description
  * @date 2020/7/1 16:39
  * @author: wsr
@@ -9,31 +9,30 @@ namespace App\CrontabWork;
 
 use EasySwoole\EasySwoole\Crontab\AbstractCronTask;
 use EasySwoole\EasySwoole\Task\TaskManager;
+use App\Lib\Caches\Video;
 
-class TaskOne extends AbstractCronTask
+class TaskVideo extends AbstractCronTask
 {
 
     public static function getRule(): string
     {
+        // todo 每分钟执行一次
         return '*/1 * * * *';
     }
 
     public static function getTaskName(): string
     {
-        return  'taskOne';
+        return  'taskVideo';
     }
 
     function run(int $taskId, int $workerIndex)
     {
-        var_dump('c');
-        TaskManager::getInstance()->async(function (){
-            var_dump('r');
-        });
+        $videoCache = new Video();
+        $videoCache->setIndexVideo();
     }
 
     function onException(\Throwable $throwable, int $taskId, int $workerIndex)
     {
-        // TODO: Implement onException() method.
         echo $throwable->getMessage();
     }
 }

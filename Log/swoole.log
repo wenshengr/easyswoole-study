@@ -5455,3 +5455,355 @@ Stack trace:
 #0 {main}
   thrown in /data/web/imooc/easyswoole.api.com/App/HttpController/Api/Test.php on line 162
 [2020-07-04 11:09:50 $2757.0]	WARNING	swManager_check_exit_status: worker#3[pid=2763] abnormal exit, status=255, signal=0
+[2020-07-04 16:37:32 *4637.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught EasySwoole\Redis\Exception\RedisException: ERR Protocol error: invalid bulk length in /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php:2913
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php(592): EasySwoole\Redis\Redis->recv()
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(129): EasySwoole\Redis\Redis->set('index_vedio_cat...', Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(55): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php on line 2913
+[2020-07-04 16:37:32 $4634.0]	WARNING	swManager_check_exit_status: worker#0[pid=4637] abnormal exit, status=255, signal=0
+[2020-07-04 16:37:33 *4653.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught EasySwoole\Redis\Exception\RedisException: ERR Protocol error: invalid bulk length in /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php:2913
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php(592): EasySwoole\Redis\Redis->recv()
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(129): EasySwoole\Redis\Redis->set('index_vedio_cat...', Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(55): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php on line 2913
+[2020-07-04 16:37:33 $4634.0]	WARNING	swManager_check_exit_status: worker#0[pid=4653] abnormal exit, status=255, signal=0
+[2020-07-04 16:37:34 *4654.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught EasySwoole\Redis\Exception\RedisException: ERR Protocol error: invalid bulk length in /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php:2913
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php(592): EasySwoole\Redis\Redis->recv()
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(129): EasySwoole\Redis\Redis->set('index_vedio_cat...', Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(55): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php on line 2913
+[2020-07-04 16:37:34 $4634.0]	WARNING	swManager_check_exit_status: worker#0[pid=4654] abnormal exit, status=255, signal=0
+[2020-07-04 16:37:43 *4660.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught EasySwoole\Redis\Exception\RedisException: ERR Protocol error: invalid bulk length in /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php:2913
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php(592): EasySwoole\Redis\Redis->recv()
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(129): EasySwoole\Redis\Redis->set('index_vedio_cat...', Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(55): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/vendor/easyswoole/redis/src/Redis.php on line 2913
+[2020-07-04 16:37:43 $4657.0]	WARNING	swManager_check_exit_status: worker#0[pid=4660] abnormal exit, status=255, signal=0
+[2020-07-04 16:39:43 *4784.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:129
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(55): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 129
+[2020-07-04 16:39:43 $4781.0]	WARNING	swManager_check_exit_status: worker#0[pid=4784] abnormal exit, status=255, signal=0
+[2020-07-04 16:39:44 *4797.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:129
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(55): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 129
+[2020-07-04 16:39:44 $4781.0]	WARNING	swManager_check_exit_status: worker#0[pid=4797] abnormal exit, status=255, signal=0
+[2020-07-04 16:45:49 *4808.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to a member function set() on null in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:135
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(62): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 135
+[2020-07-04 16:45:49 $4805.0]	WARNING	swManager_check_exit_status: worker#0[pid=4808] abnormal exit, status=255, signal=0
+[2020-07-04 16:45:50 *4821.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to a member function set() on null in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:135
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(62): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 135
+[2020-07-04 16:45:50 $4805.0]	WARNING	swManager_check_exit_status: worker#0[pid=4821] abnormal exit, status=255, signal=0
+[2020-07-04 16:45:51 *4822.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to a member function set() on null in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:135
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(62): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 135
+[2020-07-04 16:45:51 $4805.0]	WARNING	swManager_check_exit_status: worker#0[pid=4822] abnormal exit, status=255, signal=0
+[2020-07-04 16:54:31 *4829.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to a member function set() on null in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:136
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(62): App\Lib\Caches\Video->setVideoRedisCache(0, '[{"id":17,"name...')
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 136
+[2020-07-04 16:54:31 $4826.0]	WARNING	swManager_check_exit_status: worker#0[pid=4829] abnormal exit, status=255, signal=0
+[2020-07-04 16:54:32 *4842.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to a member function set() on null in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:136
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(62): App\Lib\Caches\Video->setVideoRedisCache(0, '[{"id":17,"name...')
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 136
+[2020-07-04 16:54:32 $4826.0]	WARNING	swManager_check_exit_status: worker#0[pid=4842] abnormal exit, status=255, signal=0
+[2020-07-04 16:56:17 *4848.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to a member function set() on null in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:127
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(54): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 127
+[2020-07-04 16:56:17 $4845.0]	WARNING	swManager_check_exit_status: worker#0[pid=4848] abnormal exit, status=255, signal=0
+[2020-07-04 16:56:18 *4861.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to a member function set() on null in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:127
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(54): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(79): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 127
+[2020-07-04 16:56:18 $4845.0]	WARNING	swManager_check_exit_status: worker#0[pid=4861] abnormal exit, status=255, signal=0
+[2020-07-04 16:58:58 *4884.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to undefined method App\Lib\Db\Redis::set() in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php:127
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php(54): App\Lib\Caches\Video->setVideoRedisCache(0, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(80): App\Lib\Caches\Video->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video.php on line 127
+[2020-07-04 16:58:58 $4881.0]	WARNING	swManager_check_exit_status: worker#0[pid=4884] abnormal exit, status=255, signal=0
+[2020-07-04 20:23:25 #5846.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:47
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 47
+[2020-07-04 20:24:52 #5866.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:49
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 49
+[2020-07-04 20:26:51 #5886.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:49
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 49
+[2020-07-04 20:27:33 #5906.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:50
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 50
+[2020-07-04 20:34:01 #5929.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ReflectionException: Class \App\Lib\Cache\Base\File does not exist in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:56
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(56): ReflectionClass->__construct('\\App\\Lib\\Cache\\...')
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(57): App\Lib\ClassReflect->initClass('CacheFile', Array, Array)
+#2 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#3 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 56
+[2020-07-04 20:38:09 #5949.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ReflectionException: Class \App\Lib\Cache\Base\File does not exist in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:56
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(56): ReflectionClass->__construct('\\App\\Lib\\Cache\\...')
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(57): App\Lib\ClassReflect->initClass('CacheFile', Array, Array)
+#2 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#3 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 56
+[2020-07-04 20:44:52 #6077.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ReflectionException: Class \App\Lib\Cache\Base\File does not exist in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:57
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(57): ReflectionClass->__construct('\\App\\Lib\\Cache\\...')
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(57): App\Lib\ClassReflect->initClass('file', Array, Array)
+#2 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#3 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 57
+[2020-07-04 20:45:44 #6098.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:56
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(57): App\Lib\ClassReflect->initClass('file', Array, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 56
+[2020-07-04 20:46:37 #6118.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:58
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(57): App\Lib\ClassReflect->initClass('file', Array, Array)
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 58
+[2020-07-04 20:48:47 #6138.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:59
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 59
+[2020-07-04 20:49:17 #6158.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:36
+Stack trace:
+#0 [internal function]: App\Lib\Caches\CacheBase->__construct('file')
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(57): App\Lib\ClassReflect->initClass('CacheFile', Array, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 36
+[2020-07-04 20:50:09 #6178.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:36
+Stack trace:
+#0 [internal function]: App\Lib\Caches\CacheBase->__construct('file')
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(57): App\Lib\ClassReflect->initClass('CacheFile', Array, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 36
+[2020-07-04 20:51:35 #6198.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:36
+Stack trace:
+#0 [internal function]: App\Lib\Caches\CacheBase->__construct('file')
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(49): App\Lib\ClassReflect->initClass('CacheFile', Array, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 36
+[2020-07-04 21:14:37 #6322.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Exception: 无效的配置信息! in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:84
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 84
+[2020-07-04 21:15:46 #6342.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Exception: 无效的配置信息! in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:85
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 85
+[2020-07-04 21:16:14 #6362.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:36
+Stack trace:
+#0 [internal function]: App\Lib\Caches\CacheBase->__construct(Array, 'file')
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(81): App\Lib\ClassReflect->initClass('CacheFile', Array, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 36
+[2020-07-04 21:16:44 #6382.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:36
+Stack trace:
+#0 [internal function]: App\Lib\Caches\CacheBase->__construct(Array, 'file')
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(81): App\Lib\ClassReflect->initClass('CacheFile', Array, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 36
+[2020-07-04 21:18:39 #6406.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:38
+Stack trace:
+#0 [internal function]: App\Lib\Caches\CacheBase->__construct(Array, 'file')
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(81): App\Lib\ClassReflect->initClass('CacheFile', Array, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 38
+[2020-07-04 21:18:51 #6426.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:83
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 83
+[2020-07-04 21:19:37 #6446.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:83
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 83
+[2020-07-04 21:21:43 #6466.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Exception: 无效的配置信息! in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:95
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 95
+[2020-07-04 21:22:33 #6487.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:65
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(82): App\Lib\Caches\CacheBase->setCache()
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 65
+[2020-07-04 21:23:28 #6528.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:68
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(82): App\Lib\Caches\CacheBase->setCache()
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 68
+[2020-07-04 21:23:50 #6548.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:68
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(82): App\Lib\Caches\CacheBase->setCache()
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 68
+[2020-07-04 22:06:02 #6693.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:103
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(84): App\Lib\Caches\CacheBase->setCache()
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 103
+[2020-07-04 22:06:34 #6713.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:103
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(84): App\Lib\Caches\CacheBase->setCache()
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 103
+[2020-07-04 22:07:25 #6733.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:103
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(84): App\Lib\Caches\CacheBase->setCache()
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 103
+[2020-07-04 22:30:20 #6926.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to undefined method App\Lib\Caches\Base\Redis::setCache() in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:84
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 84
+[2020-07-04 22:31:41 #6949.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to undefined method App\Lib\Caches\Base\Redis::setCache() in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:84
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 84
+[2020-07-04 22:33:14 #6969.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ReflectionException: Class App\Lib\Caches\Base\Redis does not have a constructor, so you cannot pass any constructor arguments in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:55
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(83): App\Lib\ClassReflect->initClass('CacheRedis', Array, Array)
+#2 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#3 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 55
+[2020-07-04 22:35:36 #6989.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ReflectionException: Class App\Lib\Caches\Base\Redis does not have a constructor, so you cannot pass any constructor arguments in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:55
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(83): App\Lib\ClassReflect->initClass('CacheRedis', Array, Array)
+#2 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#3 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 55
+[2020-07-04 22:36:36 #7009.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ReflectionException: Class App\Lib\Caches\Base\Redis does not have a constructor, so you cannot pass any constructor arguments in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:55
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(83): App\Lib\ClassReflect->initClass('CacheRedis', Array, Array)
+#2 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#3 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 55
+[2020-07-04 22:37:37 #7029.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ReflectionException: Class App\Lib\Caches\Base\Redis does not have a constructor, so you cannot pass any constructor arguments in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:55
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(83): App\Lib\ClassReflect->initClass('CacheRedis', Array, Array)
+#2 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#3 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 55
+[2020-07-04 22:38:53 #7049.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:47
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 47
+[2020-07-04 22:40:14 #7172.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:81
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 81
+[2020-07-04 22:40:34 #7192.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ReflectionException: Class App\Lib\Caches\Base\Redis does not have a constructor, so you cannot pass any constructor arguments in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php:55
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(81): App\Lib\ClassReflect->initClass('CacheRedis', Array, Array)
+#2 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#3 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php on line 55
+[2020-07-04 22:41:12 #7212.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:50
+Stack trace:
+#0 [internal function]: App\Lib\Caches\CacheBase->__construct(Array, 'redis', Array)
+#1 /data/web/imooc/easyswoole.api.com/App/Lib/ClassReflect.php(55): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(81): App\Lib\ClassReflect->initClass('CacheRedis', Array, Array)
+#3 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#4 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 50
+[2020-07-04 22:41:31 #7232.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:82
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 82
+[2020-07-04 23:10:11 #7722.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Exception: 无效的配置信息! in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php:70
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#1 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php on line 70
+[2020-07-04 23:10:55 #7742.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php:71
+Stack trace:
+#0 /data/web/imooc/easyswoole.api.com/App/Lib/Caches/Video2.php(63): App\Lib\Caches\CacheBase->setCache()
+#1 /data/web/imooc/easyswoole.api.com/EasySwooleEvent.php(67): App\Lib\Caches\Video2->setIndexVideo()
+#2 {main}
+  thrown in /data/web/imooc/easyswoole.api.com/App/Lib/Caches/CacheBase.php on line 71

@@ -32,7 +32,9 @@ class ClassReflect
     public function cacheClassStat()
     {
         return [
-            'CacheFile' => '\App\Lib\Cache\Base\File',
+            'CacheFile' => '\App\Lib\Caches\Base\File',
+            'CacheTable' => '\App\Lib\Caches\Base\Table',
+            'CacheRedis' => '\App\Lib\Caches\Base\Redis',
         ];
     }
 
@@ -50,7 +52,6 @@ class ClassReflect
             return FALSE;
         }
         $className = $supportedClass[$type];
-
         return $needInstance ? (new \ReflectionClass($className))->newInstanceArgs($params) : $className;
     }
 }

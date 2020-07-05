@@ -1,6 +1,6 @@
 .idea/*
-Temp/
 Ini/
 public/
 vendor/
-
+Log/*
+Temp/*
